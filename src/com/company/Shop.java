@@ -1,16 +1,16 @@
 package com.company;
 
-import javafx.util.Pair;
+import java.util.HashMap;
 
-import java.util.Set;
+public abstract class Shop implements Visitable{
 
-public abstract class Shop {
+    private HashMap<String, Integer> tovars = new HashMap<>();
 
-    Set<Pair<String, Integer>> tovars;
-
-    protected void addTovar(String s, Integer price) {
-        tovars.add(new Pair<>(s, price));
+    public void addTovar(String s, Integer price) {
+        tovars.put(s, price);
     }
 
-    public abstract void sell();
+    public HashMap<String,Integer> getTovars() {
+        return tovars;
+    }
 }

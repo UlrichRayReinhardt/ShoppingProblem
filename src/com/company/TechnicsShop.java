@@ -3,7 +3,7 @@ package com.company;
 public class TechnicsShop extends Shop{
 
     TechnicsShop(){
-        addTovar("Sony", 100);
+        super.addTovar("Sony", 100);
         addTovar("Samsung", 80);
         addTovar("Sharp", 70);
         addTovar("Apple", 300);
@@ -11,7 +11,7 @@ public class TechnicsShop extends Shop{
     }
 
     @Override
-    public void sell() {
-
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

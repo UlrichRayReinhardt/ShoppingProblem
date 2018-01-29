@@ -10,8 +10,10 @@ public class VegetablesShop extends Shop {
         addTovar("Potato", 40);
     }
 
+
+
     @Override
-    public void sell() {
+    public void accept(Visitor visitor) {
 
     }
 }
